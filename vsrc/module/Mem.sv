@@ -15,7 +15,7 @@ module Mem
     output dbus_req_t         dreq,         // CPU -> cache
     input  dbus_resp_t        dresp         // cache -> CPU
 );
-    assign dreq.valid  = MemRead | MemWrite;
+    assign dreq.valid  = 1'b0;
     assign dreq.addr   = memAddr;
     assign dreq.size   = MSIZE8;
     assign dreq.strobe = 8'b11111111;

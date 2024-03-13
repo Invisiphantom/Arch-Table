@@ -81,24 +81,22 @@ void VSimTop___024root___initial__TOP__1(VSimTop___024root* vlSelf) {
     vlSelf->SimTop__DOT__core__DOT__u_Regs__DOT__Register[0x1eU] = 0ULL;
     vlSelf->SimTop__DOT__core__DOT__u_Regs__DOT__Register[0x1fU] = 0ULL;
     vlSelf->SimTop__DOT__core__DOT__u_Regs__DOT__i = 0x20U;
-    vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2 
-        = VL_RAND_RESET_I(11);
     vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand1 
         = (0x408U | (0x380U & VL_RAND_RESET_I(11)));
-    vlSelf->SimTop__DOT__core__DOT__PCaddress = 0ULL;
 }
 
 void VSimTop___024unit____Vdpiimwrap_get_switch_TOP____024unit(IData/*31:0*/ &get_switch__Vfuncrtn);
 void VSimTop___024unit____Vdpiimwrap_ram_read_helper_TOP____024unit(CData/*0:0*/ en, QData/*63:0*/ rIdx, QData/*63:0*/ &ram_read_helper__Vfuncrtn);
 extern const VlUnpacked<CData/*0:0*/, 256> VSimTop__ConstPool__TABLE_f37f1103_0;
 
-void VSimTop___024root___settle__TOP__3(VSimTop___024root* vlSelf) {
+void VSimTop___024root___settle__TOP__4(VSimTop___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VSimTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VSimTop___024root___settle__TOP__3\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VSimTop___024root___settle__TOP__4\n"); );
     // Variables
     CData/*7:0*/ __Vtableidx1;
-    VlWide<5>/*159:0*/ __Vtemp102;
+    VlWide<3>/*95:0*/ __Vtemp96;
+    VlWide<5>/*159:0*/ __Vtemp103;
     // Body
     if (vlSelf->SimTop__DOT__mux__DOT__busy) {
         vlSelf->SimTop__DOT__mux__DOT__unnamedblk2__DOT__i = 2U;
@@ -109,6 +107,229 @@ void VSimTop___024root___settle__TOP__3(VSimTop___024root* vlSelf) {
                                                - 0x80000000ULL) 
                                               >> 3U)
                                            : 0ULL);
+    vlSelf->SimTop__DOT__icreq[0U] = 0U;
+    vlSelf->SimTop__DOT__icreq[1U] = 0U;
+    vlSelf->SimTop__DOT__icreq[2U] = ((IData)(vlSelf->SimTop__DOT__core__DOT__PCaddress) 
+                                      << 0x12U);
+    vlSelf->SimTop__DOT__icreq[3U] = (((IData)(vlSelf->SimTop__DOT__core__DOT__PCaddress) 
+                                       >> 0xeU) | ((IData)(
+                                                           (vlSelf->SimTop__DOT__core__DOT__PCaddress 
+                                                            >> 0x20U)) 
+                                                   << 0x12U));
+    vlSelf->SimTop__DOT__icreq[4U] = (0x480000U | ((IData)(
+                                                           (vlSelf->SimTop__DOT__core__DOT__PCaddress 
+                                                            >> 0x20U)) 
+                                                   >> 0xeU));
+    vlSelf->SimTop__DOT__core__DOT__imm = ((0x40U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                            ? ((0x20U 
+                                                & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                ? (
+                                                   (0x10U 
+                                                    & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                    ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
+                                                    : 
+                                                   ((8U 
+                                                     & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                     ? 
+                                                    ((4U 
+                                                      & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                      ? 
+                                                     ((2U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((1U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 
+                                                       (((- (QData)((IData)(
+                                                                            (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                             >> 0x1fU)))) 
+                                                         << 0x15U) 
+                                                        | (QData)((IData)(
+                                                                          ((0x100000U 
+                                                                            & (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                               >> 0xbU)) 
+                                                                           | ((0xff000U 
+                                                                               & vlSelf->SimTop__DOT__core__DOT__instruction) 
+                                                                              | ((0x800U 
+                                                                                & (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                                >> 9U)) 
+                                                                                | (0x7feU 
+                                                                                & (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                                >> 0x14U))))))))
+                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                      : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                     : 
+                                                    ((4U 
+                                                      & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                      ? 
+                                                     ((2U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((1U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 
+                                                       (((- (QData)((IData)(
+                                                                            (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                             >> 0x1fU)))) 
+                                                         << 0xcU) 
+                                                        | (QData)((IData)(
+                                                                          (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                           >> 0x14U))))
+                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                      : 
+                                                     ((2U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((1U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 
+                                                       (((- (QData)((IData)(
+                                                                            (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                             >> 0x1fU)))) 
+                                                         << 0xdU) 
+                                                        | (QData)((IData)(
+                                                                          ((0x1000U 
+                                                                            & (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                               >> 0x13U)) 
+                                                                           | ((0x800U 
+                                                                               & (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                                << 4U)) 
+                                                                              | ((0x7e0U 
+                                                                                & (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                                >> 0x14U)) 
+                                                                                | (0x1eU 
+                                                                                & (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                                >> 7U))))))))
+                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1))))
+                                                : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                            : ((0x20U 
+                                                & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                ? (
+                                                   (0x10U 
+                                                    & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                    ? 
+                                                   ((8U 
+                                                     & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                     ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
+                                                     : 
+                                                    ((4U 
+                                                      & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                      ? 
+                                                     ((2U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((1U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 
+                                                       (((QData)((IData)(
+                                                                         (- (IData)(
+                                                                                (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                                >> 0x1fU))))) 
+                                                         << 0x20U) 
+                                                        | (QData)((IData)(
+                                                                          (0xfffff000U 
+                                                                           & vlSelf->SimTop__DOT__core__DOT__instruction))))
+                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                      : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1))
+                                                    : 
+                                                   ((8U 
+                                                     & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                     ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
+                                                     : 
+                                                    ((4U 
+                                                      & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                      ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
+                                                      : 
+                                                     ((2U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((1U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 
+                                                       (((- (QData)((IData)(
+                                                                            (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                             >> 0x1fU)))) 
+                                                         << 0xcU) 
+                                                        | (QData)((IData)(
+                                                                          ((0xfe0U 
+                                                                            & (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                               >> 0x14U)) 
+                                                                           | (0x1fU 
+                                                                              & (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                                >> 7U))))))
+                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1))))
+                                                : (
+                                                   (0x10U 
+                                                    & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                    ? 
+                                                   ((8U 
+                                                     & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                     ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
+                                                     : 
+                                                    ((4U 
+                                                      & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                      ? 
+                                                     ((2U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((1U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 
+                                                       (((QData)((IData)(
+                                                                         (- (IData)(
+                                                                                (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                                >> 0x1fU))))) 
+                                                         << 0x20U) 
+                                                        | (QData)((IData)(
+                                                                          (0xfffff000U 
+                                                                           & vlSelf->SimTop__DOT__core__DOT__instruction))))
+                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                      : 
+                                                     ((2U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((1U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 
+                                                       (((- (QData)((IData)(
+                                                                            (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                             >> 0x1fU)))) 
+                                                         << 0xcU) 
+                                                        | (QData)((IData)(
+                                                                          (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                           >> 0x14U))))
+                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)))
+                                                    : 
+                                                   ((8U 
+                                                     & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                     ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
+                                                     : 
+                                                    ((4U 
+                                                      & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                      ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
+                                                      : 
+                                                     ((2U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((1U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 
+                                                       (((- (QData)((IData)(
+                                                                            (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                             >> 0x1fU)))) 
+                                                         << 0xcU) 
+                                                        | (QData)((IData)(
+                                                                          (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                                           >> 0x14U))))
+                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
+                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1))))));
     vlSelf->SimTop__DOT__core__DOT__retReg[0U] = (IData)(
                                                          vlSelf->SimTop__DOT__core__DOT__u_Regs__DOT__Register
                                                          [0x1fU]);
@@ -333,19 +554,85 @@ void VSimTop___024root___settle__TOP__3(VSimTop___024root* vlSelf) {
                                                             (vlSelf->SimTop__DOT__core__DOT__u_Regs__DOT__Register
                                                              [0U] 
                                                              >> 0x20U));
-    vlSelf->SimTop__DOT__icreq[0U] = 0U;
-    vlSelf->SimTop__DOT__icreq[1U] = 0U;
-    vlSelf->SimTop__DOT__icreq[2U] = ((IData)(vlSelf->SimTop__DOT__core__DOT__PCaddress) 
-                                      << 0x12U);
-    vlSelf->SimTop__DOT__icreq[3U] = (((IData)(vlSelf->SimTop__DOT__core__DOT__PCaddress) 
-                                       >> 0xeU) | ((IData)(
-                                                           (vlSelf->SimTop__DOT__core__DOT__PCaddress 
-                                                            >> 0x20U)) 
-                                                   << 0x12U));
-    vlSelf->SimTop__DOT__icreq[4U] = (0x480000U | ((IData)(
-                                                           (vlSelf->SimTop__DOT__core__DOT__PCaddress 
-                                                            >> 0x20U)) 
-                                                   >> 0xeU));
+    vlSelf->SimTop__DOT__core__DOT__readData2_R = vlSelf->SimTop__DOT__core__DOT__u_Regs__DOT__Register
+        [(0x1fU & (vlSelf->SimTop__DOT__core__DOT__instruction 
+                   >> 0x14U))];
+    vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control 
+        = ((0x40U & vlSelf->SimTop__DOT__core__DOT__instruction)
+            ? ((0x20U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                ? ((0x10U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                    ? 0U : ((8U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                             ? ((4U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                 ? ((2U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                     ? ((1U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                         ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand1)
+                                         : 0U) : 0U)
+                                 : 0U) : ((4U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                           ? ((2U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                               ? ((1U 
+                                                   & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                   ? 0x604U
+                                                   : 0U)
+                                               : 0U)
+                                           : ((2U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                               ? ((1U 
+                                                   & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                   ? 0x90U
+                                                   : 0U)
+                                               : 0U))))
+                : 0U) : ((0x20U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                          ? ((0x10U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                              ? ((8U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                  ? 0U : ((4U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                           ? ((2U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                               ? ((1U 
+                                                   & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                   ? 0x602U
+                                                   : 0U)
+                                               : 0U)
+                                           : ((2U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                               ? ((1U 
+                                                   & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                   ? 0x500U
+                                                   : 0U)
+                                               : 0U)))
+                              : ((8U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                  ? 0U : ((4U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                           ? 0U : (
+                                                   (2U 
+                                                    & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                     ? 0x220U
+                                                     : 0U)
+                                                    : 0U))))
+                          : ((0x10U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                              ? ((8U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                  ? 0U : ((4U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                           ? ((2U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                               ? ((1U 
+                                                   & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                   ? 0x601U
+                                                   : 0U)
+                                               : 0U)
+                                           : ((2U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                               ? ((1U 
+                                                   & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                   ? 0x780U
+                                                   : 0U)
+                                               : 0U)))
+                              : ((8U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                  ? 0U : ((4U & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                           ? 0U : (
+                                                   (2U 
+                                                    & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                     ? 0x640U
+                                                     : 0U)
+                                                    : 0U))))));
     vlSelf->SimTop__DOT__oresp[0U] = 0U;
     vlSelf->SimTop__DOT__oresp[1U] = 0U;
     vlSelf->SimTop__DOT__oresp[2U] = 0U;
@@ -431,6 +718,146 @@ void VSimTop___024root___settle__TOP__3(VSimTop___024root* vlSelf) {
                   64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name());
         VL_STOP_MT("src/test/vsrc/common/ram.sv", 236, "");
     }
+    vlSelf->SimTop__DOT__core__DOT__aluControl = ((0x100U 
+                                                   & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
+                                                   ? 
+                                                  ((0x80U 
+                                                    & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
+                                                    ? 
+                                                   ((0x40000000U 
+                                                     & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                     ? 
+                                                    ((0x4000U 
+                                                      & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                      ? 
+                                                     ((0x2000U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 0U
+                                                        : 1U)
+                                                       : 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 0xaU
+                                                        : 7U))
+                                                      : 
+                                                     ((0x2000U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 5U
+                                                        : 4U)
+                                                       : 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_ALUControl__DOT____Vxrand2)
+                                                        : 2U)))
+                                                     : 
+                                                    ((0x4000U 
+                                                      & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                      ? 
+                                                     ((0x2000U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 0U
+                                                        : 1U)
+                                                       : 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 8U
+                                                        : 7U))
+                                                      : 
+                                                     ((0x2000U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 5U
+                                                        : 4U)
+                                                       : 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 3U
+                                                        : 2U))))
+                                                    : 
+                                                   ((0x40000000U 
+                                                     & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                     ? 
+                                                    ((0x4000U 
+                                                      & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                      ? 
+                                                     ((0x2000U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_ALUControl__DOT____Vxrand1)
+                                                       : 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 0xaU
+                                                        : (IData)(vlSelf->SimTop__DOT__core__DOT__u_ALUControl__DOT____Vxrand1)))
+                                                      : 
+                                                     ((0x2000U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_ALUControl__DOT____Vxrand1)
+                                                       : 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_ALUControl__DOT____Vxrand1)
+                                                        : 6U)))
+                                                     : 
+                                                    ((0x4000U 
+                                                      & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                      ? 
+                                                     ((0x2000U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 0U
+                                                        : 1U)
+                                                       : 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 8U
+                                                        : 7U))
+                                                      : 
+                                                     ((0x2000U 
+                                                       & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                       ? 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 5U
+                                                        : 4U)
+                                                       : 
+                                                      ((0x1000U 
+                                                        & vlSelf->SimTop__DOT__core__DOT__instruction)
+                                                        ? 3U
+                                                        : 2U)))))
+                                                   : 
+                                                  ((0x80U 
+                                                    & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
+                                                    ? 6U
+                                                    : 2U));
+    vlSelf->SimTop__DOT__core__DOT__aluB = ((0x200U 
+                                             & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
+                                             ? vlSelf->SimTop__DOT__core__DOT__imm
+                                             : vlSelf->SimTop__DOT__core__DOT__readData2_R);
+    vlSelf->SimTop__DOT__core__DOT__aluA = ((2U & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
+                                             ? 0ULL
+                                             : ((1U 
+                                                 & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
+                                                 ? 
+                                                (vlSelf->SimTop__DOT__core__DOT__PCaddress 
+                                                 - 4ULL)
+                                                 : 
+                                                vlSelf->SimTop__DOT__core__DOT__u_Regs__DOT__Register
+                                                [(0x1fU 
+                                                  & (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                     >> 0xfU))]));
     vlSelf->SimTop__DOT____Vcellout__mux__iresps[0U] = 0U;
     vlSelf->SimTop__DOT____Vcellout__mux__iresps[1U] = 0U;
     vlSelf->SimTop__DOT____Vcellout__mux__iresps[2U] = 0U;
@@ -473,6 +900,9 @@ void VSimTop___024root___settle__TOP__3(VSimTop___024root* vlSelf) {
                                          << 2U)));
         }
     }
+    vlSelf->SimTop__DOT__core__DOT__s_less = VL_LTS_IQQ(1,64,64, vlSelf->SimTop__DOT__core__DOT__aluA, vlSelf->SimTop__DOT__core__DOT__aluB);
+    vlSelf->SimTop__DOT__core__DOT__u_less = (vlSelf->SimTop__DOT__core__DOT__aluA 
+                                              < vlSelf->SimTop__DOT__core__DOT__aluB);
     vlSelf->SimTop__DOT__icvt__DOT__dresp[0U] = (IData)(
                                                         (((QData)((IData)(
                                                                           vlSelf->SimTop__DOT____Vcellout__mux__iresps[4U])) 
@@ -501,674 +931,6 @@ void VSimTop___024root___settle__TOP__3(VSimTop___024root* vlSelf) {
                                                                    >> 3U) 
                                                                   & (vlSelf->SimTop__DOT____Vcellout__mux__iresps[4U] 
                                                                      >> 2U))))));
-    vlSelf->SimTop__DOT__iresp = (((QData)((IData)(
-                                                   (3U 
-                                                    & vlSelf->SimTop__DOT__icvt__DOT__dresp[2U]))) 
-                                   << 0x20U) | (QData)((IData)(
-                                                               ((1U 
-                                                                 & (IData)(
-                                                                           (vlSelf->SimTop__DOT__core__DOT__PCaddress 
-                                                                            >> 2U)))
-                                                                 ? 
-                                                                vlSelf->SimTop__DOT__icvt__DOT__dresp[1U]
-                                                                 : 
-                                                                vlSelf->SimTop__DOT__icvt__DOT__dresp[0U]))));
-    vlSelf->SimTop__DOT__core__DOT__imm = ((1U & (IData)(
-                                                         (vlSelf->SimTop__DOT__iresp 
-                                                          >> 6U)))
-                                            ? ((1U 
-                                                & (IData)(
-                                                          (vlSelf->SimTop__DOT__iresp 
-                                                           >> 5U)))
-                                                ? (
-                                                   (1U 
-                                                    & (IData)(
-                                                              (vlSelf->SimTop__DOT__iresp 
-                                                               >> 4U)))
-                                                    ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
-                                                    : 
-                                                   ((1U 
-                                                     & (IData)(
-                                                               (vlSelf->SimTop__DOT__iresp 
-                                                                >> 3U)))
-                                                     ? 
-                                                    ((1U 
-                                                      & (IData)(
-                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                 >> 2U)))
-                                                      ? 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 1U)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                        ? 
-                                                       (((- (QData)((IData)(
-                                                                            (1U 
-                                                                             & (IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x1fU)))))) 
-                                                         << 0x15U) 
-                                                        | (QData)((IData)(
-                                                                          ((0x100000U 
-                                                                            & ((IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x1fU)) 
-                                                                               << 0x14U)) 
-                                                                           | ((0xff000U 
-                                                                               & ((IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0xcU)) 
-                                                                                << 0xcU)) 
-                                                                              | ((0x800U 
-                                                                                & ((IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x14U)) 
-                                                                                << 0xbU)) 
-                                                                                | (0x7feU 
-                                                                                & ((IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x15U)) 
-                                                                                << 1U))))))))
-                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                      : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                     : 
-                                                    ((1U 
-                                                      & (IData)(
-                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                 >> 2U)))
-                                                      ? 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 1U)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                        ? 
-                                                       (((- (QData)((IData)(
-                                                                            (1U 
-                                                                             & (IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x1fU)))))) 
-                                                         << 0xcU) 
-                                                        | (QData)((IData)(
-                                                                          (0xfffU 
-                                                                           & (IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x14U))))))
-                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                      : 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 1U)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                        ? 
-                                                       (((- (QData)((IData)(
-                                                                            (1U 
-                                                                             & (IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x1fU)))))) 
-                                                         << 0xdU) 
-                                                        | (QData)((IData)(
-                                                                          ((0x1000U 
-                                                                            & ((IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x1fU)) 
-                                                                               << 0xcU)) 
-                                                                           | ((0x800U 
-                                                                               & ((IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 7U)) 
-                                                                                << 0xbU)) 
-                                                                              | ((0x7e0U 
-                                                                                & ((IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x19U)) 
-                                                                                << 5U)) 
-                                                                                | (0x1eU 
-                                                                                & ((IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 8U)) 
-                                                                                << 1U))))))))
-                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1))))
-                                                : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                            : ((1U 
-                                                & (IData)(
-                                                          (vlSelf->SimTop__DOT__iresp 
-                                                           >> 5U)))
-                                                ? (
-                                                   (1U 
-                                                    & (IData)(
-                                                              (vlSelf->SimTop__DOT__iresp 
-                                                               >> 4U)))
-                                                    ? 
-                                                   ((1U 
-                                                     & (IData)(
-                                                               (vlSelf->SimTop__DOT__iresp 
-                                                                >> 3U)))
-                                                     ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
-                                                     : 
-                                                    ((1U 
-                                                      & (IData)(
-                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                 >> 2U)))
-                                                      ? 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 1U)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                        ? 
-                                                       (((QData)((IData)(
-                                                                         (- (IData)(
-                                                                                (1U 
-                                                                                & (IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x1fU))))))) 
-                                                         << 0x20U) 
-                                                        | (QData)((IData)(
-                                                                          ((IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0xcU)) 
-                                                                           << 0xcU))))
-                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                      : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1))
-                                                    : 
-                                                   ((1U 
-                                                     & (IData)(
-                                                               (vlSelf->SimTop__DOT__iresp 
-                                                                >> 3U)))
-                                                     ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
-                                                     : 
-                                                    ((1U 
-                                                      & (IData)(
-                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                 >> 2U)))
-                                                      ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
-                                                      : 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 1U)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                        ? 
-                                                       (((- (QData)((IData)(
-                                                                            (1U 
-                                                                             & (IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x1fU)))))) 
-                                                         << 0xcU) 
-                                                        | (QData)((IData)(
-                                                                          ((0xfe0U 
-                                                                            & ((IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x19U)) 
-                                                                               << 5U)) 
-                                                                           | (0x1fU 
-                                                                              & (IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 7U)))))))
-                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1))))
-                                                : (
-                                                   (1U 
-                                                    & (IData)(
-                                                              (vlSelf->SimTop__DOT__iresp 
-                                                               >> 4U)))
-                                                    ? 
-                                                   ((1U 
-                                                     & (IData)(
-                                                               (vlSelf->SimTop__DOT__iresp 
-                                                                >> 3U)))
-                                                     ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
-                                                     : 
-                                                    ((1U 
-                                                      & (IData)(
-                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                 >> 2U)))
-                                                      ? 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 1U)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                        ? 
-                                                       (((QData)((IData)(
-                                                                         (- (IData)(
-                                                                                (1U 
-                                                                                & (IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x1fU))))))) 
-                                                         << 0x20U) 
-                                                        | (QData)((IData)(
-                                                                          ((IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0xcU)) 
-                                                                           << 0xcU))))
-                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                      : 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 1U)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                        ? 
-                                                       (((- (QData)((IData)(
-                                                                            (1U 
-                                                                             & (IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x1fU)))))) 
-                                                         << 0xcU) 
-                                                        | (QData)((IData)(
-                                                                          (0xfffU 
-                                                                           & (IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x14U))))))
-                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)))
-                                                    : 
-                                                   ((1U 
-                                                     & (IData)(
-                                                               (vlSelf->SimTop__DOT__iresp 
-                                                                >> 3U)))
-                                                     ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
-                                                     : 
-                                                    ((1U 
-                                                      & (IData)(
-                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                 >> 2U)))
-                                                      ? vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1
-                                                      : 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 1U)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                        ? 
-                                                       (((- (QData)((IData)(
-                                                                            (1U 
-                                                                             & (IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x1fU)))))) 
-                                                         << 0xcU) 
-                                                        | (QData)((IData)(
-                                                                          (0xfffU 
-                                                                           & (IData)(
-                                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                                >> 0x14U))))))
-                                                        : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1)
-                                                       : vlSelf->SimTop__DOT__core__DOT__u_ImmGen__DOT____Vxrand1))))));
-    vlSelf->SimTop__DOT__core__DOT__readData2_R = vlSelf->SimTop__DOT__core__DOT__u_Regs__DOT__Register
-        [(0x1fU & (IData)((vlSelf->SimTop__DOT__iresp 
-                           >> 0x14U)))];
-    vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control 
-        = ((1U & (IData)((vlSelf->SimTop__DOT__iresp 
-                          >> 6U))) ? ((1U & (IData)(
-                                                    (vlSelf->SimTop__DOT__iresp 
-                                                     >> 5U)))
-                                       ? ((1U & (IData)(
-                                                        (vlSelf->SimTop__DOT__iresp 
-                                                         >> 4U)))
-                                           ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2)
-                                           : ((1U & (IData)(
-                                                            (vlSelf->SimTop__DOT__iresp 
-                                                             >> 3U)))
-                                               ? ((1U 
-                                                   & (IData)(
-                                                             (vlSelf->SimTop__DOT__iresp 
-                                                              >> 2U)))
-                                                   ? 
-                                                  ((1U 
-                                                    & (IData)(
-                                                              (vlSelf->SimTop__DOT__iresp 
-                                                               >> 1U)))
-                                                    ? 
-                                                   ((1U 
-                                                     & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                     ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand1)
-                                                     : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                                    : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                                   : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                               : ((1U 
-                                                   & (IData)(
-                                                             (vlSelf->SimTop__DOT__iresp 
-                                                              >> 2U)))
-                                                   ? 
-                                                  ((1U 
-                                                    & (IData)(
-                                                              (vlSelf->SimTop__DOT__iresp 
-                                                               >> 1U)))
-                                                    ? 
-                                                   ((1U 
-                                                     & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                     ? 0x604U
-                                                     : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                                    : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                                   : 
-                                                  ((1U 
-                                                    & (IData)(
-                                                              (vlSelf->SimTop__DOT__iresp 
-                                                               >> 1U)))
-                                                    ? 
-                                                   ((1U 
-                                                     & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                     ? 0x90U
-                                                     : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                                    : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2)))))
-                                       : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-            : ((1U & (IData)((vlSelf->SimTop__DOT__iresp 
-                              >> 5U))) ? ((1U & (IData)(
-                                                        (vlSelf->SimTop__DOT__iresp 
-                                                         >> 4U)))
-                                           ? ((1U & (IData)(
-                                                            (vlSelf->SimTop__DOT__iresp 
-                                                             >> 3U)))
-                                               ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2)
-                                               : ((1U 
-                                                   & (IData)(
-                                                             (vlSelf->SimTop__DOT__iresp 
-                                                              >> 2U)))
-                                                   ? 
-                                                  ((1U 
-                                                    & (IData)(
-                                                              (vlSelf->SimTop__DOT__iresp 
-                                                               >> 1U)))
-                                                    ? 
-                                                   ((1U 
-                                                     & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                     ? 0x602U
-                                                     : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                                    : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                                   : 
-                                                  ((1U 
-                                                    & (IData)(
-                                                              (vlSelf->SimTop__DOT__iresp 
-                                                               >> 1U)))
-                                                    ? 
-                                                   ((1U 
-                                                     & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                     ? 0x500U
-                                                     : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                                    : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))))
-                                           : ((1U & (IData)(
-                                                            (vlSelf->SimTop__DOT__iresp 
-                                                             >> 3U)))
-                                               ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2)
-                                               : ((1U 
-                                                   & (IData)(
-                                                             (vlSelf->SimTop__DOT__iresp 
-                                                              >> 2U)))
-                                                   ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2)
-                                                   : 
-                                                  ((1U 
-                                                    & (IData)(
-                                                              (vlSelf->SimTop__DOT__iresp 
-                                                               >> 1U)))
-                                                    ? 
-                                                   ((1U 
-                                                     & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                     ? 0x220U
-                                                     : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                                    : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2)))))
-                : ((1U & (IData)((vlSelf->SimTop__DOT__iresp 
-                                  >> 4U))) ? ((1U & (IData)(
-                                                            (vlSelf->SimTop__DOT__iresp 
-                                                             >> 3U)))
-                                               ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2)
-                                               : ((1U 
-                                                   & (IData)(
-                                                             (vlSelf->SimTop__DOT__iresp 
-                                                              >> 2U)))
-                                                   ? 
-                                                  ((1U 
-                                                    & (IData)(
-                                                              (vlSelf->SimTop__DOT__iresp 
-                                                               >> 1U)))
-                                                    ? 
-                                                   ((1U 
-                                                     & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                     ? 0x601U
-                                                     : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                                    : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                                   : 
-                                                  ((1U 
-                                                    & (IData)(
-                                                              (vlSelf->SimTop__DOT__iresp 
-                                                               >> 1U)))
-                                                    ? 
-                                                   ((1U 
-                                                     & (IData)(vlSelf->SimTop__DOT__iresp))
-                                                     ? 0x780U
-                                                     : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                                    : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))))
-                    : ((1U & (IData)((vlSelf->SimTop__DOT__iresp 
-                                      >> 3U))) ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2)
-                        : ((1U & (IData)((vlSelf->SimTop__DOT__iresp 
-                                          >> 2U))) ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2)
-                            : ((1U & (IData)((vlSelf->SimTop__DOT__iresp 
-                                              >> 1U)))
-                                ? ((1U & (IData)(vlSelf->SimTop__DOT__iresp))
-                                    ? 0x640U : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2))
-                                : (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2)))))));
-    vlSelf->SimTop__DOT__core__DOT__aluControl = ((0x100U 
-                                                   & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
-                                                   ? 
-                                                  ((0x80U 
-                                                    & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
-                                                    ? 
-                                                   ((1U 
-                                                     & (IData)(
-                                                               (vlSelf->SimTop__DOT__iresp 
-                                                                >> 0x1eU)))
-                                                     ? 
-                                                    ((1U 
-                                                      & (IData)(
-                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                 >> 0xeU)))
-                                                      ? 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 0xdU)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? 0U
-                                                        : 1U)
-                                                       : 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? 0xaU
-                                                        : 7U))
-                                                      : 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 0xdU)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? 5U
-                                                        : 4U)
-                                                       : 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_ALUControl__DOT____Vxrand2)
-                                                        : 2U)))
-                                                     : 
-                                                    ((1U 
-                                                      & (IData)(
-                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                 >> 0xeU)))
-                                                      ? 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 0xdU)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? 0U
-                                                        : 1U)
-                                                       : 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? 8U
-                                                        : 7U))
-                                                      : 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 0xdU)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? 5U
-                                                        : 4U)
-                                                       : 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? 3U
-                                                        : 2U))))
-                                                    : 
-                                                   ((1U 
-                                                     & (IData)(
-                                                               (vlSelf->SimTop__DOT__iresp 
-                                                                >> 0x1eU)))
-                                                     ? 
-                                                    ((1U 
-                                                      & (IData)(
-                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                 >> 0xeU)))
-                                                      ? 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 0xdU)))
-                                                       ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_ALUControl__DOT____Vxrand1)
-                                                       : 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? 0xaU
-                                                        : (IData)(vlSelf->SimTop__DOT__core__DOT__u_ALUControl__DOT____Vxrand1)))
-                                                      : 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 0xdU)))
-                                                       ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_ALUControl__DOT____Vxrand1)
-                                                       : 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? (IData)(vlSelf->SimTop__DOT__core__DOT__u_ALUControl__DOT____Vxrand1)
-                                                        : 6U)))
-                                                     : 
-                                                    ((1U 
-                                                      & (IData)(
-                                                                (vlSelf->SimTop__DOT__iresp 
-                                                                 >> 0xeU)))
-                                                      ? 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 0xdU)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? 0U
-                                                        : 1U)
-                                                       : 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? 8U
-                                                        : 7U))
-                                                      : 
-                                                     ((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->SimTop__DOT__iresp 
-                                                                  >> 0xdU)))
-                                                       ? 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? 5U
-                                                        : 4U)
-                                                       : 
-                                                      ((1U 
-                                                        & (IData)(
-                                                                  (vlSelf->SimTop__DOT__iresp 
-                                                                   >> 0xcU)))
-                                                        ? 3U
-                                                        : 2U)))))
-                                                   : 
-                                                  ((0x80U 
-                                                    & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
-                                                    ? 6U
-                                                    : 2U));
-    vlSelf->SimTop__DOT__core__DOT__aluB = ((0x200U 
-                                             & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
-                                             ? vlSelf->SimTop__DOT__core__DOT__imm
-                                             : vlSelf->SimTop__DOT__core__DOT__readData2_R);
-    vlSelf->SimTop__DOT__core__DOT__aluA = ((2U & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
-                                             ? 0ULL
-                                             : ((1U 
-                                                 & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
-                                                 ? vlSelf->SimTop__DOT__core__DOT__PCaddress
-                                                 : 
-                                                vlSelf->SimTop__DOT__core__DOT__u_Regs__DOT__Register
-                                                [(0x1fU 
-                                                  & (IData)(
-                                                            (vlSelf->SimTop__DOT__iresp 
-                                                             >> 0xfU)))]));
-    vlSelf->SimTop__DOT__core__DOT__s_less = VL_LTS_IQQ(1,64,64, vlSelf->SimTop__DOT__core__DOT__aluA, vlSelf->SimTop__DOT__core__DOT__aluB);
-    vlSelf->SimTop__DOT__core__DOT__u_less = (vlSelf->SimTop__DOT__core__DOT__aluA 
-                                              < vlSelf->SimTop__DOT__core__DOT__aluB);
     vlSelf->SimTop__DOT__core__DOT__aluResult = ((8U 
                                                   & (IData)(vlSelf->SimTop__DOT__core__DOT__aluControl))
                                                   ? 
@@ -1239,6 +1001,18 @@ void VSimTop___024root___settle__TOP__3(VSimTop___024root* vlSelf) {
                                                      : 
                                                     (vlSelf->SimTop__DOT__core__DOT__aluA 
                                                      & vlSelf->SimTop__DOT__core__DOT__aluB)))));
+    vlSelf->SimTop__DOT__iresp = (((QData)((IData)(
+                                                   (3U 
+                                                    & vlSelf->SimTop__DOT__icvt__DOT__dresp[2U]))) 
+                                   << 0x20U) | (QData)((IData)(
+                                                               ((1U 
+                                                                 & (IData)(
+                                                                           (vlSelf->SimTop__DOT__core__DOT__PCaddress 
+                                                                            >> 2U)))
+                                                                 ? 
+                                                                vlSelf->SimTop__DOT__icvt__DOT__dresp[1U]
+                                                                 : 
+                                                                vlSelf->SimTop__DOT__icvt__DOT__dresp[0U]))));
     __Vtableidx1 = (((IData)(vlSelf->SimTop__DOT__core__DOT__u_BranchUnit__DOT____Vxrand1) 
                      << 7U) | (((IData)(vlSelf->SimTop__DOT__core__DOT__u_less) 
                                 << 6U) | (((IData)(vlSelf->SimTop__DOT__core__DOT__s_less) 
@@ -1246,32 +1020,27 @@ void VSimTop___024root___settle__TOP__3(VSimTop___024root* vlSelf) {
                                           (((0ULL == vlSelf->SimTop__DOT__core__DOT__aluResult) 
                                             << 4U) 
                                            | ((0xeU 
-                                               & ((IData)(
-                                                          (vlSelf->SimTop__DOT__iresp 
-                                                           >> 0xcU)) 
-                                                  << 1U)) 
+                                               & (vlSelf->SimTop__DOT__core__DOT__instruction 
+                                                  >> 0xbU)) 
                                               | (1U 
                                                  & ((IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control) 
                                                     >> 4U)))))));
     vlSelf->SimTop__DOT__core__DOT__Cnd = VSimTop__ConstPool__TABLE_f37f1103_0
         [__Vtableidx1];
+    VL_EXTEND_WQ(65,64, __Vtemp96, vlSelf->SimTop__DOT__core__DOT__aluResult);
     vlSelf->SimTop__DOT__dreq[0U] = (IData)(vlSelf->SimTop__DOT__core__DOT__readData2_R);
     vlSelf->SimTop__DOT__dreq[1U] = (IData)((vlSelf->SimTop__DOT__core__DOT__readData2_R 
                                              >> 0x20U));
-    vlSelf->SimTop__DOT__dreq[2U] = (0x3ffU | ((IData)(vlSelf->SimTop__DOT__core__DOT__aluResult) 
+    vlSelf->SimTop__DOT__dreq[2U] = (0x3ffU | (__Vtemp96[0U] 
                                                << 0xbU));
-    vlSelf->SimTop__DOT__dreq[3U] = (((IData)(vlSelf->SimTop__DOT__core__DOT__aluResult) 
-                                      >> 0x15U) | ((IData)(
-                                                           (vlSelf->SimTop__DOT__core__DOT__aluResult 
-                                                            >> 0x20U)) 
+    vlSelf->SimTop__DOT__dreq[3U] = ((__Vtemp96[0U] 
+                                      >> 0x15U) | (
+                                                   __Vtemp96[1U] 
                                                    << 0xbU));
-    vlSelf->SimTop__DOT__dreq[4U] = (((IData)((0U != 
-                                               (0x60U 
-                                                & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control)))) 
-                                      << 0xbU) | ((IData)(
-                                                          (vlSelf->SimTop__DOT__core__DOT__aluResult 
-                                                           >> 0x20U)) 
-                                                  >> 0x15U));
+    vlSelf->SimTop__DOT__dreq[4U] = ((__Vtemp96[1U] 
+                                      >> 0x15U) | (
+                                                   __Vtemp96[2U] 
+                                                   << 0xbU));
     vlSelf->SimTop__DOT__core__DOT__PCnext = ((4U & (IData)(vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control))
                                                ? vlSelf->SimTop__DOT__core__DOT__aluResult
                                                : ((1U 
@@ -1284,7 +1053,7 @@ void VSimTop___024root___settle__TOP__3(VSimTop___024root* vlSelf) {
                                                    : 
                                                   (4ULL 
                                                    + vlSelf->SimTop__DOT__core__DOT__PCaddress)));
-    __Vtemp102[3U] = ((0x3ffU & ((IData)((((QData)((IData)(
+    __Vtemp103[3U] = ((0x3ffU & ((IData)((((QData)((IData)(
                                                            vlSelf->SimTop__DOT__dreq[4U])) 
                                            << 0x35U) 
                                           | (((QData)((IData)(
@@ -1317,7 +1086,7 @@ void VSimTop___024root___settle__TOP__3(VSimTop___024root* vlSelf) {
                                                                  >> 0xbU))) 
                                                           >> 0x20U)) 
                                                  << 0x12U)));
-    __Vtemp102[4U] = ((0x3ffU & ((IData)(((((QData)((IData)(
+    __Vtemp103[4U] = ((0x3ffU & ((IData)(((((QData)((IData)(
                                                             vlSelf->SimTop__DOT__dreq[4U])) 
                                             << 0x35U) 
                                            | (((QData)((IData)(
@@ -1391,8 +1160,8 @@ void VSimTop___024root___settle__TOP__3(VSimTop___024root* vlSelf) {
                                                                      vlSelf->SimTop__DOT__dreq[0U]))) 
                                                   >> 0x20U)) 
                                          >> 0x16U));
-    vlSelf->SimTop__DOT__dcreq[3U] = __Vtemp102[3U];
-    vlSelf->SimTop__DOT__dcreq[4U] = __Vtemp102[4U];
+    vlSelf->SimTop__DOT__dcreq[3U] = __Vtemp103[3U];
+    vlSelf->SimTop__DOT__dcreq[4U] = __Vtemp103[4U];
     vlSelf->SimTop__DOT____Vcellinp__mux__ireqs[0U] 
         = vlSelf->SimTop__DOT__dcreq[0U];
     vlSelf->SimTop__DOT____Vcellinp__mux__ireqs[1U] 
@@ -1777,6 +1546,7 @@ void VSimTop___024root___eval_initial(VSimTop___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VSimTop___024root___eval_initial\n"); );
     // Body
     VSimTop___024root___initial__TOP__1(vlSelf);
+    vlSelf->__Vm_traceActivity[2U] = 1U;
     vlSelf->__Vm_traceActivity[1U] = 1U;
     vlSelf->__Vm_traceActivity[0U] = 1U;
     vlSelf->__Vclklast__TOP__clock = vlSelf->clock;
@@ -1787,7 +1557,8 @@ void VSimTop___024root___eval_settle(VSimTop___024root* vlSelf) {
     VSimTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VSimTop___024root___eval_settle\n"); );
     // Body
-    VSimTop___024root___settle__TOP__3(vlSelf);
+    VSimTop___024root___settle__TOP__4(vlSelf);
+    vlSelf->__Vm_traceActivity[2U] = 1U;
     vlSelf->__Vm_traceActivity[1U] = 1U;
     vlSelf->__Vm_traceActivity[0U] = 1U;
 }
@@ -1827,9 +1598,11 @@ void VSimTop___024root___ctor_var_reset(VSimTop___024root* vlSelf) {
     VL_RAND_RESET_W(302, vlSelf->SimTop__DOT____Vcellinp__mux__ireqs);
     vlSelf->SimTop__DOT__core__DOT__PCnext = VL_RAND_RESET_Q(64);
     vlSelf->SimTop__DOT__core__DOT__PCaddress = VL_RAND_RESET_Q(64);
+    vlSelf->SimTop__DOT__core__DOT__PCaddress_submit = VL_RAND_RESET_Q(64);
     vlSelf->SimTop__DOT__core__DOT__Cnd = VL_RAND_RESET_I(1);
     vlSelf->SimTop__DOT__core__DOT__imm = VL_RAND_RESET_Q(64);
     vlSelf->SimTop__DOT__core__DOT__aluResult = VL_RAND_RESET_Q(64);
+    vlSelf->SimTop__DOT__core__DOT__instruction = VL_RAND_RESET_I(32);
     VL_RAND_RESET_W(2048, vlSelf->SimTop__DOT__core__DOT__retReg);
     vlSelf->SimTop__DOT__core__DOT__readData2_R = VL_RAND_RESET_Q(64);
     vlSelf->SimTop__DOT__core__DOT__aluControl = VL_RAND_RESET_I(4);
@@ -1837,7 +1610,11 @@ void VSimTop___024root___ctor_var_reset(VSimTop___024root* vlSelf) {
     vlSelf->SimTop__DOT__core__DOT__aluB = VL_RAND_RESET_Q(64);
     vlSelf->SimTop__DOT__core__DOT__s_less = VL_RAND_RESET_I(1);
     vlSelf->SimTop__DOT__core__DOT__u_less = VL_RAND_RESET_I(1);
-    vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2 = VL_RAND_RESET_I(11);
+    vlSelf->SimTop__DOT__core__DOT__run = VL_RAND_RESET_I(1);
+    vlSelf->SimTop__DOT__core__DOT__runrun = VL_RAND_RESET_I(1);
+    vlSelf->SimTop__DOT__core__DOT__runrunrun = VL_RAND_RESET_I(1);
+    vlSelf->SimTop__DOT__core__DOT__runrunrunrun = VL_RAND_RESET_I(1);
+    vlSelf->SimTop__DOT__core__DOT__runrunrunrunrun = VL_RAND_RESET_I(1);
     vlSelf->SimTop__DOT__core__DOT__u_Control__DOT____Vxrand1 = VL_RAND_RESET_I(11);
     vlSelf->SimTop__DOT__core__DOT__u_Control__DOT__control = VL_RAND_RESET_I(11);
     vlSelf->SimTop__DOT__core__DOT__u_Regs__DOT__i = VL_RAND_RESET_I(32);
@@ -1877,7 +1654,7 @@ void VSimTop___024root___ctor_var_reset(VSimTop___024root* vlSelf) {
     vlSelf->SimTop__DOT__ram__DOT__msip = VL_RAND_RESET_I(1);
     vlSelf->__Vfunc_get_switch__5__Vfuncout = 0;
     vlSelf->__Vfunc_ram_read_helper__6__Vfuncout = 0;
-    for (int __Vi0=0; __Vi0<2; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<3; ++__Vi0) {
         vlSelf->__Vm_traceActivity[__Vi0] = VL_RAND_RESET_I(1);
     }
 }

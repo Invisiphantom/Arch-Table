@@ -42,12 +42,18 @@ VL_MODULE(VSimTop___024root) {
     CData/*3:0*/ SimTop__DOT__core__DOT__aluControl;
     CData/*0:0*/ SimTop__DOT__core__DOT__s_less;
     CData/*0:0*/ SimTop__DOT__core__DOT__u_less;
+    CData/*0:0*/ SimTop__DOT__core__DOT__run;
+    CData/*0:0*/ SimTop__DOT__core__DOT__runrun;
+    CData/*0:0*/ SimTop__DOT__core__DOT__runrunrun;
+    CData/*0:0*/ SimTop__DOT__core__DOT__runrunrunrun;
+    CData/*0:0*/ SimTop__DOT__core__DOT__runrunrunrunrun;
     CData/*0:0*/ SimTop__DOT__mux__DOT__busy;
     CData/*1:0*/ SimTop__DOT__ram__DOT__state;
     CData/*7:0*/ SimTop__DOT__ram__DOT__count_down;
     CData/*3:0*/ SimTop__DOT__ram__DOT__size;
     CData/*0:0*/ SimTop__DOT__ram__DOT__msip;
     SData/*10:0*/ SimTop__DOT__core__DOT__u_Control__DOT__control;
+    IData/*31:0*/ SimTop__DOT__core__DOT__instruction;
     IData/*31:0*/ SimTop__DOT__core__DOT__u_Regs__DOT__i;
     IData/*31:0*/ SimTop__DOT__mux__DOT__index;
     IData/*31:0*/ SimTop__DOT__mux__DOT__select;
@@ -61,6 +67,7 @@ VL_MODULE(VSimTop___024root) {
     VlWide<5>/*150:0*/ SimTop__DOT__dcreq;
     QData/*63:0*/ SimTop__DOT__core__DOT__PCnext;
     QData/*63:0*/ SimTop__DOT__core__DOT__PCaddress;
+    QData/*63:0*/ SimTop__DOT__core__DOT__PCaddress_submit;
     QData/*63:0*/ SimTop__DOT__core__DOT__imm;
     QData/*63:0*/ SimTop__DOT__core__DOT__aluResult;
     VlWide<64>/*2047:0*/ SimTop__DOT__core__DOT__retReg;
@@ -88,7 +95,6 @@ VL_MODULE(VSimTop___024root) {
     CData/*0:0*/ SimTop__DOT__core__DOT__u_BranchUnit__DOT____Vxrand1;
     CData/*0:0*/ SimTop__DOT__mux__DOT____Vxrand3;
     CData/*0:0*/ __Vclklast__TOP__clock;
-    SData/*10:0*/ SimTop__DOT__core__DOT__u_Control__DOT____Vxrand2;
     SData/*10:0*/ SimTop__DOT__core__DOT__u_Control__DOT____Vxrand1;
     VlWide<5>/*150:0*/ SimTop__DOT__mux__DOT____Vxrand2;
     VlWide<5>/*150:0*/ SimTop__DOT__mux__DOT____Vxrand1;
@@ -99,7 +105,7 @@ VL_MODULE(VSimTop___024root) {
     QData/*63:0*/ SimTop__DOT__core__DOT__u_ALU__DOT____Vxrand1;
     VlWide<3>/*65:0*/ SimTop__DOT__mux__DOT____Vlvbound4;
     QData/*63:0*/ __Vfunc_ram_read_helper__6__Vfuncout;
-    VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
+    VlUnpacked<CData/*0:0*/, 3> __Vm_traceActivity;
 
     // INTERNAL VARIABLES
     VSimTop__Syms* vlSymsp;  // Symbol table

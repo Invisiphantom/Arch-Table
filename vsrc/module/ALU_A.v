@@ -7,7 +7,7 @@ module ALU_A (
 );
     always @(*) begin
         if (Lui == 1'b1) aluA = {64{1'b0}};  // lui [rd=0+imm]
-        else if (Auipc == 1'b1) aluA = PCaddress;  // auipc [rd=PC+imm]
+        else if (Auipc == 1'b1) aluA = PCaddress - 4;  // auipc [rd=PC+imm]
         else aluA = readData1_R;  // rs1
     end
 endmodule

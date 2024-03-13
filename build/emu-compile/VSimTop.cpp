@@ -69,7 +69,7 @@ static void _eval_initial_loop(VSimTop__Syms* __restrict vlSymsp) {
             Verilated::debug(1);
             __Vchange = VSimTop___024root___change_request(&(vlSymsp->TOP));
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("/home/ethan/arch-2024/build/../vsrc/../build/../vsrc/SimTop.sv", 8, "",
+            VL_FATAL_MT("/home/ethan/Arch-Table/build/../vsrc/../build/../vsrc/SimTop.sv", 8, "",
                 "Verilated model didn't DC converge\n"
                 "- See https://verilator.org/warn/DIDNOTCONVERGE");
         } else {
@@ -100,7 +100,7 @@ void VSimTop::eval_step() {
             Verilated::debug(1);
             __Vchange = VSimTop___024root___change_request(&(vlSymsp->TOP));
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("/home/ethan/arch-2024/build/../vsrc/../build/../vsrc/SimTop.sv", 8, "",
+            VL_FATAL_MT("/home/ethan/Arch-Table/build/../vsrc/../build/../vsrc/SimTop.sv", 8, "",
                 "Verilated model didn't converge\n"
                 "- See https://verilator.org/warn/DIDNOTCONVERGE");
         } else {

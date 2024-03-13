@@ -1,8 +1,8 @@
-main.o: /home/ethan/arch-2024/difftest/src/test/csrc/verilator/main.cpp \
- /home/ethan/arch-2024/difftest/src/test/csrc/verilator/emu.h \
- /home/ethan/arch-2024/difftest/src/test/csrc/common/common.h \
- /home/ethan/arch-2024/difftest/src/test/csrc/common/../../../../config/config.h \
- /home/ethan/arch-2024/difftest/src/test/csrc/verilator/snapshot.h \
+main.o: /home/ethan/Arch-Table/difftest/src/test/csrc/verilator/main.cpp \
+ /home/ethan/Arch-Table/difftest/src/test/csrc/verilator/emu.h \
+ /home/ethan/Arch-Table/difftest/src/test/csrc/common/common.h \
+ /home/ethan/Arch-Table/difftest/src/test/csrc/common/../../../../config/config.h \
+ /home/ethan/Arch-Table/difftest/src/test/csrc/verilator/snapshot.h \
  VSimTop.h /usr/local/share/verilator/include/verilated_heavy.h \
  /usr/local/share/verilator/include/verilated.h \
  /usr/local/share/verilator/include/verilatedos.h \

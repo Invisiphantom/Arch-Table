@@ -29,7 +29,7 @@ module Control (
             7'b0010111: control = 11'b11_00_0000001;  // auipc
             default: begin
                 // Halt = 1'b1; // 遇到非法指令就停机
-                control = 11'bxxxxxxxxxxx;
+                control = 11'b0;
             end
         endcase
     end
